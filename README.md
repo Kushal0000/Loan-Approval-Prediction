@@ -26,11 +26,14 @@ This project predicts whether a loan application will be **approved** or **not a
 
 
 
-📊 Sample API Request & Response
-🔸 Request Payload (POST /predict)
+📦 Sample Request & Response
+✅ Request (JSON Payload)
 json
 Copy
 Edit
+POST /predict
+Content-Type: application/json
+
 {
   "Gender": 1,
   "Married": 1,
@@ -44,25 +47,44 @@ Edit
   "Credit_History": 1,
   "Property_Area": 2
 }
-🔸 Sample Response
+📤 Response
 json
 Copy
 Edit
 {
   "Loan Status": "Approved"
 }
-📈 Model Performance
-Accuracy: 85%
+⚙️ Features
+Real-time loan status prediction via API
 
-Average API Response Time: < 100ms
+Built with FastAPI for high-performance and asynchronous I/O
 
-Key Features:
+Preprocessing includes feature scaling using StandardScaler
+
+Uses a pre-trained Logistic Regression model serialized with joblib
+
+🚀 Performance Metrics
+✅ Accuracy: 85% on validation dataset
+
+⚡ API Latency: < 100 ms average response time
+
+🔑 Important Features:
 
 ApplicantIncome
 
 CoapplicantIncome
 
 LoanAmount
+
+Loan_Amount_Term
+
+Credit_History
+
+Property_Area
+
+Categorical Encoded Variables like Gender, Married, Education
+
+
 
 Credit_History
 
