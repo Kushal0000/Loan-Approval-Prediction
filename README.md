@@ -24,13 +24,6 @@ This project predicts whether a loan application will be **approved** or **not a
 ---
 
 
-
-# 🏦 Loan Approval Prediction API
-
-A high-performance **FastAPI**-based REST API that predicts loan approval status using a **machine learning model** trained on financial and demographic data. Built to demonstrate real-world application of data science and MLOps in production environments.
-
----
-
 ## 🚀 Features
 
 - ✅ Loan Approval Prediction (Approved / Not Approved)
