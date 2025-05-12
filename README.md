@@ -26,23 +26,8 @@ This project predicts whether a loan application will be **approved** or **not a
 
 
 
-## 🚀 How to Run the API
-
-1. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-Run the FastAPI server
-
-bash
-Copy
-Edit
-uvicorn app:app --reload
-Test the API using Postman
-Endpoint: POST http://127.0.0.1:8000/predict
-
-Sample JSON payload:
-
+📊 Sample API Request & Response
+🔸 Request Payload (POST /predict)
 json
 Copy
 Edit
@@ -59,17 +44,29 @@ Edit
   "Credit_History": 1,
   "Property_Area": 2
 }
-Response
-
+🔸 Sample Response
 json
 Copy
 Edit
 {
   "Loan Status": "Approved"
 }
-📈 Results
+📈 Model Performance
 Accuracy: 85%
 
-FastAPI response time: <100ms
+Average API Response Time: < 100ms
 
-Features used: Income, Credit History, Loan Amount, Property Area, etc.
+Key Features:
+
+ApplicantIncome
+
+CoapplicantIncome
+
+LoanAmount
+
+Credit_History
+
+Property_Area
+
+Education, Married, etc.
+
