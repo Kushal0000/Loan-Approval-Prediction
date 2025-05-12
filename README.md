@@ -20,20 +20,45 @@ This project predicts whether a loan application will be **approved** or **not a
 - **FastAPI** for API development
 - **Pydantic** for input data validation
 - **Postman** for testing API endpoints
-- **Matplotlib** & **Seaborn** for EDA and visualization
 
 ---
 
 
 
-📦 Sample Request & Response
-✅ Request (JSON Payload)
-json
-Copy
-Edit
-POST /predict
-Content-Type: application/json
+# 🏦 Loan Approval Prediction API
 
+A high-performance **FastAPI**-based REST API that predicts loan approval status using a **machine learning model** trained on financial and demographic data. Built to demonstrate real-world application of data science and MLOps in production environments.
+
+---
+
+## 🚀 Features
+
+- ✅ Loan Approval Prediction (Approved / Not Approved)
+- 🧠 ML Model: Logistic Regression
+- ⚙️ Preprocessing with `StandardScaler` for numerical features
+- 🔁 Built with **FastAPI** for fast, asynchronous API calls
+- 📦 Model and scaler loaded using `joblib`
+- 📊 Features used: Income, Credit History, Loan Amount, Property Area, and more
+
+---
+
+## 📈 Model Performance
+
+| Metric         | Value     |
+|----------------|-----------|
+| Accuracy       | 85%       |
+| Response Time  | < 100 ms  |
+| Algorithm      | Logistic Regression |
+| Scaler         | StandardScaler |
+
+---
+
+## 🧪 Sample API Request (via POST)
+
+### Endpoint
+### JSON Payload
+
+```json
 {
   "Gender": 1,
   "Married": 1,
@@ -47,48 +72,6 @@ Content-Type: application/json
   "Credit_History": 1,
   "Property_Area": 2
 }
-📤 Response
-json
-Copy
-Edit
 {
   "Loan Status": "Approved"
 }
-⚙️ Features
-Real-time loan status prediction via API
-
-Built with FastAPI for high-performance and asynchronous I/O
-
-Preprocessing includes feature scaling using StandardScaler
-
-Uses a pre-trained Logistic Regression model serialized with joblib
-
-🚀 Performance Metrics
-✅ Accuracy: 85% on validation dataset
-
-⚡ API Latency: < 100 ms average response time
-
-🔑 Important Features:
-
-ApplicantIncome
-
-CoapplicantIncome
-
-LoanAmount
-
-Loan_Amount_Term
-
-Credit_History
-
-Property_Area
-
-Categorical Encoded Variables like Gender, Married, Education
-
-
-
-Credit_History
-
-Property_Area
-
-Education, Married, etc.
-
